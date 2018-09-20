@@ -1,0 +1,26 @@
+<h1>Create another dumb song</h1>
+
+<form action="/songs" method="post">
+
+  <label for="song_name">Song Name:</label>
+  <input id="Name" type="text" name="song_name">
+
+  <label for="artist_name">Artist Name:</label>
+  <input id="Artist Name" type="text" name="artist_name">
+  <br>
+  <label> Genres </label>
+ <% Genre.all.each do |genre| %>
+   <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>"><%=genre.name%>
+ <% end %>
+
+  <input id="Create" type="submit">
+
+
+
+
+
+
+
+
+
+</form>
